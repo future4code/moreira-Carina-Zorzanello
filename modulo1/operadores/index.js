@@ -17,6 +17,7 @@ console.log("c. ", resultado)
 
 console.log("d. ", typeof resultado) // booleano
 
+
 // // 2
 
 let primeiroNumero = prompt("Digite um numero!")
