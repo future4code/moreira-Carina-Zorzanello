@@ -34,19 +34,19 @@
 // c) Por fim, imprima o array com os nomes dos bichinhos no console
 
 
-// let numero = Number(prompt("Quantos animais de estimação você possui?"))
-// let bichinhos = []
+let numero = Number(prompt("Quantos animais de estimação você possui?"))
+let bichinhos = []
 
-// if(numero == 0){
-//     console.log("Que pena! Você pode adotar um pet!")
+if(numero == 0){
+    console.log("Que pena! Você pode adotar um pet!")
 
-// }else{
-//     for(i=0; i < numero; i++){
-//         bichinhos[i]= prompt("Digite o nome.")
-//     } 
-//     console.log(bichinhos)
+}else{
+    for(i=0; i < numero; i++){
+        bichinhos[i]= prompt("Digite o nome.")
+    } 
+    console.log(bichinhos)
 
-// }
+}
 
 
 // 2 - Considere que você tenha acesso a um array  (chamado de 'array original') que é composto somente de números.
@@ -66,71 +66,88 @@
 
 //A
 
-// const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
 
-// function imprimeArray (array){
-//     for(item of array){
-//         console.log(item)
-//     }
+function imprimeArray (array){
+    for(item of array){
+        console.log(item)
+    }
        
-// }
+}
 
-// imprimeArray(array)
+imprimeArray(array)
 
 
 // //B
 
-// const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
 
-// function imprimeArray (array){
-//     for(item of array){
-//         console.log(item / 10)
-//     }
+function imprimeArray (array){
+    for(item of array){
+        console.log(item / 10)
+    }
        
-// }
+}
 
-// imprimeArray(array)
+imprimeArray(array)
 
 // C
 
-// const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
 
-// function imprimeArray (array){
+function imprimeArray (array){
 
-//     for(item of array){
-//         if(item % 2 == 0){
+    for(item of array){
+        if(item % 2 == 0){
 
-//             console.log(item)
+            console.log(item)
 
-//         }
-//     }  
-// }
+        }
+    }  
+}
 
-// imprimeArray(array)
+imprimeArray(array)
 
 // D
    
-// const array =  [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
-// const tamanho = array.length
+const array =  [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+const tamanho = array.length
 
-// for(let i = 0; i<tamanho; i++){ 
+for(let i = 0; i<tamanho; i++){ 
     
-//     console.log(`O elemento do índex ${i} é: ${array[i]}`)
-// }
+    console.log(`O elemento do índex ${i} é: ${array[i]}`)
+}
+
+// E
 
 
+const array =  [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
 
+function retornaMaiorNumero (array){
+
+    let valorMaximo = 0
+   
    
 
+    for(item of array){
+        if(item>valorMaximo){
+           valorMaximo = item
+        }
+       
+    }
+
+    return valorMaximo
+}
 
 
+function retornaMenorNumero (array){
+    let valorMinimo = array[0]
+    for(item of array){
+        if(item<valorMinimo){
+            valorMinimo = item
+        }
+    }
+    return valorMinimo
+}
 
-
-
-
-
-
-    
-
-
-
+console.log(`O maior número é ${retornaMaiorNumero(array)} e o menor é ${retornaMenorNumero(array)}`)
