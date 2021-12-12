@@ -36,6 +36,12 @@
          return Number(item.valor)
       }
 
+      function verificaAses (valor){
+         if(valor === 22){
+            
+         }
+      }
+
      usuario[0] = comprarCarta()
      texto = usuario.map(retornaTexto);
      valorUsuario = usuario.map(retornaValor)
@@ -43,8 +49,9 @@
      usuario[0] = comprarCarta()
      texto = texto + " " + usuario.map(retornaTexto)
      valorUsuario = Number(valorUsuario) + Number(usuario.map(retornaValor))
-
-   //   console.log(`Usuário - cartas: ${texto} - pontuação ${valorUsuario}`)
+     verificaAses(valorUsuario)
+     
+     console.log(`Usuário - cartas: ${texto} - pontuação ${valorUsuario}`)
 
 
      computador[0] = comprarCarta()
@@ -56,13 +63,14 @@
      valorComputador = Number(valorComputador) + Number(computador.map(retornaValor))
 
      
-   //   console.log(`Computador - cartas: ${texto} - pontuação ${valorComputador}`)
+     console.log(`Computador - cartas: ${texto} - pontuação ${valorComputador}`)
+
   
-   //   if (valorUsuario > valorComputador){
-   //      console.log(confirm("Deseja outra rodada?"))
-   //   } else if (valorComputador > valorUsuario){
-   //      console.log("O computador ganhou!")
-   //   } else {
-   //      console.log("Empate!")
-   //   }
-   // }
+     if (valorUsuario > valorComputador){
+        console.log(confirm("Deseja outra rodada?"))
+     } else if (valorComputador > valorUsuario){
+        console.log("O computador ganhou!")
+     } else {
+        console.log("Empate!")
+     }
+   }
