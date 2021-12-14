@@ -202,9 +202,7 @@ function retornaPessoasNaoAutorizadas(pessoas) {
     return pessoasNaoAutorizadas
 }
 
-// EXERCÍCIO 14  // Gente tentei fazer mas não consegui, não consegui mais pensar mesmo com ajuda, muito exercício e muito pouco tempo de explicação
-// Sei que é para a gente pesquisar também, mas se a gente não entende se precisa de uma explicação de alguém não vai adiantar.
-
+// EXERCÍCIO 14  
 const dadosClientes = [
 	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
 	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
@@ -214,18 +212,18 @@ const dadosClientes = [
 	{ cliente: "Soter", saldoTotal: 1200, compras: [] }
 ]
 
-let totalCompra = 0
 
 function retornaContasComSaldoAtualizado(contas) {
-        contas.map(dadosCliente())
+        contas.forEach((item)=>{
+            let totalGasto = 0
+            item.compras.forEach((compras2)=>{
+                totalGasto += compras2
+            })
+            item.saldoTotal -= totalGasto
+            item.compras = []
+        })
+        return contas
 }
- function dadosCliente (item){
-    item.compras.map(dadosCompras())
- }
-
- function dadosCompras (item){
-    totalCompra += item 
- }
 
 
 
@@ -245,7 +243,7 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
     });
 }
 
-// EXERCÍCIO 15B //  esta eu tbm tentei mas não consegui mais.
+// EXERCÍCIO 15B //  esta eu tentei mas não consegui fazer, já não tava mais pensando.
 function retornaArrayOrdenadoPorData(consultas) {
     return consultas.sort(function(a, b) {
                 return new Date(a.dataDaConsulta) - new Date(b.dataDaConsulta)
