@@ -1,0 +1,86 @@
+.cabecalho{
+    color: gray;
+    background-color: aquamarine;
+    line-height: 100px;
+    margin: 5px;
+    border: 5px solid
+}
+
+#rodape-pagina{
+    background-color: aquamarine;
+    border: 2px solid;
+    color: gray;
+    height: 30px;
+    width: 100vw;
+}
+
+.titulo{
+    color: gray;
+    margin-left: 5px;
+    border: 2px solid;
+    display: inline;
+    background-color: aquamarine;
+    
+}
+
+.historia{
+    color: gray;
+    margin-left: 5px;
+    border: 2px solid;
+    background-color: aquamarine;
+    display: block;
+
+}
+
+#resumo{
+    margin-left: 5px;
+}
+
+.paginas{
+    margin-left: 2px;
+    color: gray
+}
+
+.corpo-texto{
+    margin-left: 5px;
+}
+
+.redes-sociais{
+    margin-left: 5px;
+    color: gray;
+
+}
+
+.nome-loja{
+    color: gray;
+    background-color: aquamarine;
+    margin-left: 10px;
+    display: inline-block;
+    border: solid;
+}
+
+h2{
+    color: gray
+}
+
+.botao{
+    background-color:  aquamarine;
+    color: gray;
+}
+
+.link{
+    background-color: aquamarine;
+    color: black;
+    border: 1px solid;
+}
+
+#cor-chamada{
+    color: gray;
+}
+
+.lista-funcionarios{
+    background-color: aquamarine;
+    display: inline-block;
+    border: 1px solid;
+    margin-left: 5px;
+}   
