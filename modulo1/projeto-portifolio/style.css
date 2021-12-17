@@ -1,4 +1,8 @@
 
+*{
+    margin: 0;
+}
+
 header{
     background-color: #b093ba;
     position: sticky;
@@ -27,7 +31,9 @@ header{
 h2{
     text-align: center;
     margin-top: auto;
-    color: #102a6b
+    color: #102a6b;
+    padding: 50px;
+    margin-left: 50px;
 }
 
 footer {
@@ -48,8 +54,78 @@ footer {
     line-height: 30px;
 }
 
+img{
+    height: auto; 
+    width: auto; 
+    max-width: 900px; 
+    max-height: 900px;
+    margin-left: 150px;
+}
 
 
+.habilidades{
+    padding: 50px;
+    margin-left: 50px;
+}
 
+.formata-formulario{
+    padding: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
 
+}
 
+.formulario{
+    margin-top: 50px;
+}
+
+.espacamento-de-campo{
+    margin-top: 5px;
+}
+
+.form-add{
+    margin-top: 5px; 
+}
+
+.p{
+    margin-top: 20px;  
+    padding: 50px;
+    margin-left: 50px;
+  
+}
+
+.titulo-tabela{
+    margin-top: 20px; 
+    padding: 50px;
+    margin-left: 50px;
+}
+
+.espacamento-ol{
+    margin-top: 20px;
+    padding: 50px;
+    margin-left: 50px;
+}
+
+.paragrafo{
+    margin-top: 20px;
+    padding: 50px;
+    margin-left: 50px;
+}
+
+.imagem{
+    margin-top: 20px;
+    padding: 50px;
+   
+}
+
+.instituicao{
+    margin-top: 10px;
+    padding: 30px;
+    margin-left: 30px;
+}
+
+.redes-sociais{
+    margin-top: 70px;
+    padding: 70px;
+    margin-left: 70px;
+}
