@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: grid;
+    background-color: mediumvioletred;
+    grid-template-columns: 1fr 80px;
+    height: 40px;
+    align-items: center;
+    padding: 0px 10px;
+    
+}
+
+
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 40px 1fr 40px;
+}
+main{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+footer{
+    background-color:  mediumvioletred;
+    text-align: center;
+   
+}
+
+
+#menu1{
+    background-color: #f2d0e0;
+    
+}
+.bolo{
+   display: inline-block;
+   border: darkgray;
+   
+}
+
+h2{
+    padding: 2px;
+    justify-items: center;
+}
+
+img{
+    padding: auto;
+    height:auto; 
+    width: auto;
+    width: 150px; 
+    height: 150px;
+    margin-left: 15px;
+    margin-top: 10px;
+  
+}
+
+.imagens{
+    width: 20px; 
+    height: 20px;
+    left: 15px;  
+
+}
