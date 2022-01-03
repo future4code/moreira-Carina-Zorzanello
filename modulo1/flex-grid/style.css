@@ -26,40 +26,101 @@ main{
 
 footer{
     background-color:  mediumvioletred;
-    text-align: center;
+    text-align:center;
+    padding: 10px;
    
 }
 
 
 #menu1{
     background-color: #f2d0e0;
+    text-align:justify;
     
 }
+
 .bolo{
-   display: inline-block;
-   border: darkgray;
-   
-}
-
-h2{
-    padding: 2px;
-    justify-items: center;
-}
-
-img{
+    display: flex;
+    flex-direction: column;
     padding: auto;
-    height:auto; 
-    width: auto;
-    width: 150px; 
-    height: 150px;
+    width: 160px; 
+    height: 250px;
     margin-left: 15px;
     margin-top: 10px;
+    align-items: center;
+    box-shadow: darkgray 2px 2px 1px;
+}
+
+.item-bolo{
+    display: inline-flex;
+    flex-wrap: wrap;
+    
+}
+
+h3{
+    padding: 2px;
+    justify-items: center;
+  
+}
+
+p{
+   height: 2px; 
+   margin-bottom: 10px;
+   font-size: 11px;
+   text-align: center;
+    margin-top: 16px;
+}
+
+
+img{
+    width: 160px; 
+    height: 150px;
+    
   
 }
 
 .imagens{
+    width: 15px; 
+    height: 15px;
+    left: 15px;
+    margin-right: 0px;
+    padding-top: 3px;
+
+    
+}
+
+.icone-menu{
+    width: auto; 
+    height: auto;
+    left: 15px;
+    margin-right: 0px;
+}
+
+.imagens2{
     width: 20px; 
     height: 20px;
-    left: 15px;  
+    left: 15px;
+    
+}
 
+.imagem-seta{
+    width: 20px; 
+    height: 20px;
+    left: 15px;
+    margin-right: 0px;
+}
+
+.seta1{
+    justify-self: end;
+    grid-column: 3;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 20px 1fr 10px;
+  
+}
+
+.menu{
+    justify-self: start;
+    margin-top: 4px;
 }
