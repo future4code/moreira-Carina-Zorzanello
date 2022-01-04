@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: chocolate;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    padding: 0px 20px;
+    
+    
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4,1fr); 
+    gap: 2px;
+    margin: 20px;
+    padding: 10px 150px 50px;
+    /* border: 1px solid red; */
+}
+
+.card-videos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid green;
+            
+}
+
+.video-principal{
+    width: 250px;
+    height: 250px; 
+    margin-top: -55px;  
+}
+
+.detalhes-video-um{
+    display: flex;
+    width: 95%;
+    height: 95%;
+    justify-content: center;  
+    margin-top: 20px; 
+    margin-left: 20px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+.margem-video{
+  height: 100%;
+  width: 100%;
+}
+
+footer{
+    background-color: rgb(58, 56, 56);
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    text-align: left;
+    position: relative;
+    bottom: 0;
+    
+}
+
+h3{
+    margin-left: 5px;
+}
+
+h2{
+    margin-left: 20px;
+    margin-top: 10px;
+}
