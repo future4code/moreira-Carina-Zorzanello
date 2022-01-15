@@ -1,3 +1,4 @@
+import React from 'react';
 import ChatLabe from "./components/ChatLabe";
 import styled from "styled-components";
 
@@ -15,3 +16,4 @@ export default function App() {
     </BlocoMensagem>
   );
 }
+
