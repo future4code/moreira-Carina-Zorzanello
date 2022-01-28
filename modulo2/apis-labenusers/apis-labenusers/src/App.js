@@ -16,9 +16,9 @@ import ListaUsuarios from "./components/ListaUsuarios";
       }
      
     };
-    render(){
 
-    
+    render(){
+   
       const renderizaTelaCorreta = () => {
         switch (this.state.pagina) {
           case "criar":

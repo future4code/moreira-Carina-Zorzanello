@@ -19,46 +19,46 @@ export default class ListaUsuarios extends React.Component {
     };
 
     componentDidMount() {
-        this.getAllUsers();
-      }
-
-    getAllUsers = () => {
-        axios
-        .get(urlAllUsers, headers)
-        .then((res) => {
-            this.setState({ users: res.data });
-        //   alert(`Usuário encontrado com sucesso`);
-        })
-        .catch((err) => {
-          alert("Usuário não existe, tente novamente");
-        });
+      this.getAllUsers();
     }
 
-        getsearchUsers = () => {
-            axios
-            .get(urlSearchUsers + this.state.filtraUsuario , headers)
-            .then((res)=> {
-                this.setState({users: res.data});
-            })
-            .catch((err) => {
-                alert("Usuário não encontrado, tente novamente")
-            });
-        }
+    getAllUsers = () => {
+      axios
+      .get(urlAllUsers, headers)
+      .then((res) => {
+        this.setState({ users: res.data });
+      //   alert(`Usuário encontrado com sucesso`);
+      })
+      .catch((err) => {
+        alert("Usuário não existe, tente novamente");
+      });
+    }
 
-        onUserTextChange = (event) => {
-            this.setState({ filtraUsuario: event.target.value});
-          };
+    getsearchUsers = () => {
+      axios
+      .get(urlSearchUsers + this.state.filtraUsuario , headers)
+      .then((res)=> {
+        this.setState({users: res.data});
+      })
+      .catch((err) => {
+        alert("Usuário não encontrado, tente novamente")
+      });
+    }
 
-          deleteUser = (id) => {
-              axios
-              .delete(urlDelete, headers,{id: id})
-              .then((res)=> {
-               alert ("Usuário deletado")
-            })
-            .catch((err) => {
-                // alert("Algo deu errado, tente novamente")
-            });
-          }
+    onUserTextChange = (event) => {
+      this.setState({ filtraUsuario: event.target.value});
+    };
+
+    deleteUser = (id) => {
+      axios
+      .delete(urlDelete, headers,{id: id})
+      .then((res)=> {
+        alert ("Usuário deletado")
+      })
+      .catch((err) => {
+        // alert("Algo deu errado, tente novamente")
+      });
+    }
     render(){
         const userList = this.state.users.map((list) => {
           return <li key={list.id}>{list.name} <button onClick={this.deleteUser(list.id)}>delete</button></li>;
@@ -66,19 +66,19 @@ export default class ListaUsuarios extends React.Component {
   
         return (
   
-        <div>
-          <h1>Lista de Usuário</h1>
-          {userList}
-          <input
-            value={this.state.filtraUsuario}
-            onChange={this.onUserTextChange}
-            placeholder="Nome exato para busca"
-          />
-        <button onClick={this.getsearchUsers}>Salvar Edição</button>
-        </div>
+          <div>
+            <h1>Lista de Usuário</h1>
+            {userList}
+            <input
+              value={this.state.filtraUsuario}
+              onChange={this.onUserTextChange}
+              placeholder="Nome exato para busca"
+            />
+            <button onClick={this.getsearchUsers}>Salvar Edição</button>
+          </div>
         
-          )
-      }
+        )
+    }
     
 };
 
