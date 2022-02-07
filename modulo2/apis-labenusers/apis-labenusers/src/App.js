@@ -37,9 +37,9 @@ const BotaoTela = styled.div`
       }
      
     };
-    render(){
 
-    
+    render(){
+   
       const renderizaTelaCorreta = () => {
         switch (this.state.pagina) {
           case "criar":

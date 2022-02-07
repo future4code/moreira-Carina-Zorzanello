@@ -52,52 +52,16 @@ export default class ListaUsuarios extends React.Component {
     }
 
     getAllUsers = () => {
-        axios
-        .get(urlAllUsers, headers)
-        .then((res) => {
-            this.setState({ users: res.data });
-        //   alert(`Usuário encontrado com sucesso`);
-        })
-        .catch((err) => {
-          alert("Usuário não existe, tente novamente");
-        });
-    }
-
-    getsearchUsers = () => {
-        axios
-        .get(urlSearchUsers + this.state.filtraUsuario , headers)
-        .then((res)=> {
-            this.setState({users: res.data});
-            this.setState({ filtraUsuario: ""});
-        })
-        .catch((err) => {
-            alert("Usuário não encontrado, tente novamente")
-        });
-    }
-
-    onUserTextChange = (event) => {
-      this.setState({ filtraUsuario: event.target.value});
-    };
-
-    deleteUser = (id) => {
-      const urlDelete = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`
       axios
-      .delete(urlDelete, headers)
-      .then((res)=> {
-        alert ("Usuário deletado");
-        this.getAllUsers()
+      .get(urlAllUsers, headers)
+      .then((res) => {
+        this.setState({ users: res.data });
+      //   alert(`Usuário encontrado com sucesso`);
       })
       .catch((err) => {
-          alert("Algo deu errado, tente novamente")
+        alert("Usuário não existe, tente novamente");
       });
     }
-
-    render(){
-          const userList = this.state.users.map((list) => {
-            return <CardUsuario key={list.id}>{list.name}
-            <button onClick={() => this.deleteUser(list.id)}>X</button>
-            </CardUsuario>;
-          });
     
           return (
     
