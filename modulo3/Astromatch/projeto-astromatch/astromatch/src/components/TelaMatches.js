@@ -45,7 +45,6 @@ const DivLink = styled.div`
 `
 const SelecaoDeMatches = styled.div`
     width: 250px;
-
     display: block;
     border-radius: 3%;
 
@@ -59,22 +58,20 @@ const SelecaoDeMatches = styled.div`
         position: relative;
 
     }
+
+    :hover{
+            transition: all 0.2s ease 0s;
+            cursor: pointer;
+            background-color: #D3D3D3;
+        }
    
 `
 const DivDaLista = styled.div`
     display: flex;
     list-style: none;
     width: 100%;
-    
-
-        :hover{
-            transition: all 0.2s ease 0s;
-            cursor: pointer;
-           
-        }
-    
-   
-   
+    flex-direction: column-reverse;
+     
 `  
 
 const Limpar = styled.div`
