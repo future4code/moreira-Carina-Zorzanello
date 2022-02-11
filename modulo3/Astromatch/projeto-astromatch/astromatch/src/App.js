@@ -5,7 +5,7 @@ import { GlobalStyled} from './GlobalStyled'
 function App() {
 	return (
       <div>
-
+            
          <GlobalStyled/>
          <RoutesApp />
         
