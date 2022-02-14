@@ -104,7 +104,6 @@ const Img = styled.img`
     display: block;
     z-index: 1;
     border-radius: 3%;
-    border: 
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `
 const DivLink = styled.div`
@@ -185,9 +184,9 @@ useEffect(() => {
     getAllProfile();
   }, [])
 
-const getAllProfile = () => {
+const getAllProfile = async () => {
     const urlProfileToChoose = `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${aluno}/person`;
-    axios
+    await axios
     .get(urlProfileToChoose)
     .then((res) => {
         setProfile(res.data.profile);
@@ -204,13 +203,13 @@ const getAllProfile = () => {
     // })
 }
 
-const postChoosePerson = (choice) =>{
+const postChoosePerson = async (choice) =>{
     const body = {
         id: profile.id,
         choice: choice,
       };
     const urlChoosePerson = `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${aluno}/choose-person`;
-    axios
+    await axios
     .post(urlChoosePerson, body)
     .then((res) => {
         getAllProfile()
@@ -220,10 +219,10 @@ const postChoosePerson = (choice) =>{
     })
 }
 
-const clearMatches = () => {
+const clearMatches = async () => {
    
     const urlclear = `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${aluno}/clear`;
-    axios
+    await axios
     .put(urlclear)
     .then((res)=> {
         getAllProfile()
