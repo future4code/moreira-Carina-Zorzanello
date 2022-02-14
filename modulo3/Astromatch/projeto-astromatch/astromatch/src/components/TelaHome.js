@@ -185,25 +185,20 @@ useEffect(() => {
   }, [])
 
 const getAllProfile = async () => {
+    try{
     const urlProfileToChoose = `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${aluno}/person`;
     await axios
     .get(urlProfileToChoose)
     .then((res) => {
         setProfile(res.data.profile);
     })
-    .catch((err) => {
+    } catch (err) {
         alert("Perfil não encontrado");
-    });
-    // setProfile({
-    //     id:"12355555",
-    //     name: "Carina",
-    //     age: "28",
-    //     photo: "https://picsum.photos/200/200",
-    //     bio: "Após compreender esse tema, você poderá então começar aplicar as cores através do estilos em HTML e CSS. "
-    // })
-}
+    }
+};
 
 const postChoosePerson = async (choice) =>{
+    try{
     const body = {
         id: profile.id,
         choice: choice,
@@ -214,22 +209,22 @@ const postChoosePerson = async (choice) =>{
     .then((res) => {
         getAllProfile()
     })
-    .catch((err) => {
+    }catch(err) {
         // alert("Algo deu errado, tente novamente")
-    })
-}
+    }
+};
 
 const clearMatches = async () => {
-   
+    try{
     const urlclear = `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${aluno}/clear`;
     await axios
     .put(urlclear)
     .then((res)=> {
         getAllProfile()
     })
-    .catch((err) => {
-    });
-}
+    }catch(err) {
+    }
+};
 
     return (
        
