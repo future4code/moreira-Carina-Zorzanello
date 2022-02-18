@@ -17,7 +17,7 @@ export default function App() {
               <Route path="/applicationformpage" element ={<ApplicationFormPage />} />
               <Route path="/loginpage" element ={<LoginPage />} />
               <Route path="/adminhomepage" element ={<AdminHomePage />} />
-              <Route path="/tripdetailspage" element ={<TripDetailsPage />} />
+              <Route path="/tripdetailspage/:id" element ={<TripDetailsPage />} />
               <Route path="/createtrippage" element ={<CreateTripPage />} /> 
 
         </Routes>

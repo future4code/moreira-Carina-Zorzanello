@@ -1,5 +1,9 @@
 import React from 'react';
 import {AreaFooter, RedesSociais, Colunas1} from './styled';
+import {BsInstagram} from 'react-icons/bs';
+import {BsTwitter} from 'react-icons/bs';
+import {BsWhatsapp} from 'react-icons/bs';
+import {ImFacebook} from 'react-icons/im';
 
 
 export const Footer = () => {
@@ -7,14 +11,17 @@ export const Footer = () => {
         return (
             <AreaFooter>
                <RedesSociais>
-                   <p>Facebook</p>
+                    <ImFacebook/>
+                    <BsInstagram/>
+                    <BsTwitter/>
+                    <BsWhatsapp/>
                </RedesSociais>               
                
                <div>
                    <Colunas1>Conheça</Colunas1> 
-                    <p>Franquias e Multimarcas</p>
-                    <p>Trabalhe com a Gente</p>
-                    <p>Procon-RJ</p>
+                    <p>Entre em Contato</p>
+                    <p>Venha Viajar conosco</p>
+                    <p>Realizamos o seu Sonho</p>
                </div>
              
                
