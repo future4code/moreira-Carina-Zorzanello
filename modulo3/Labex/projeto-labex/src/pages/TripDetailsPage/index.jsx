@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import { Footer } from "../../components/Footer";
-import {Container, MainPage} from './styled';
+import {Container, MainPage, Botoes} from './styled';
 
 
   const useProtectedPage = () => {
@@ -116,7 +116,7 @@ export const TripDetailsPage = () => {
                           
                         </div>
 
-              <button onClick={() => goToAdminHomePage()}>Voltar</button>
+              <Botoes onClick={() => goToAdminHomePage()}>Voltar</Botoes>
 
                   <div>
                       <h1>Candidatos Pendentes</h1>

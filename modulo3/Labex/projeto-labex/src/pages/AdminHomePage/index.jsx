@@ -2,7 +2,7 @@ import React, { useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import {Footer} from '../../components/Footer';
-import {Container, MainPage} from './styled';
+import {Container, MainPage, Botoes, DivListaViagens} from './styled';
 
   const useProtectedPage = () => {
   const routes = useNavigate();
@@ -96,19 +96,24 @@ import {Container, MainPage} from './styled';
   return (
         <Container>
           <MainPage>
-            <h1>Lista de Viagens!</h1>
-              <button onClick={() => goToCreateTrip()}>Criar Viagem</button>
-              <button>Logout</button>
-              <button onClick={() => goToHome()}>Voltar</button>
+              <DivListaViagens>
+                  <h1>Lista de Viagens!</h1>
+              </DivListaViagens>
+                    <div>
 
-            <div>
+                          <ul>
 
-              <ul>
-                {tripList}
-                
-              </ul>
-             
-            </div>
+                            {tripList}
+                            
+                          </ul>
+
+                    </div>
+
+                  <Botoes onClick={() => goToCreateTrip()}>Criar Viagem</Botoes>
+                  <Botoes>Logout</Botoes>
+                  <Botoes onClick={() => goToHome()}>Voltar</Botoes>
+
+          
             </MainPage>
             <Footer />
 

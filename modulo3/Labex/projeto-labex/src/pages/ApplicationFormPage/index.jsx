@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate} from "react-router-dom";
 import useForm from "../../Hooks/useForm";
 import axios from 'axios';
-import {Container, MainPage, DivInputs, InputName, InputIdade, InputPais, InputProfissao, InputTexto} from './styled';
+import {Container, MainPage, DivInputs, InputName, InputIdade, InputPais, InputProfissao, InputTexto, DivEscolhaViagem, Botoes} from './styled';
 import { Footer } from "../../components/Footer";
 
 export const ApplicationFormPage = () => {
@@ -74,6 +74,9 @@ export const ApplicationFormPage = () => {
        
           <form onSubmit={cadastrar}>
           <DivInputs>
+                    <DivEscolhaViagem>
+                        <p>Escolha uma Viagem </p>
+                    </DivEscolhaViagem>
               <select
                         value={form.idViagem}
                         name={"idViagem"}
@@ -81,6 +84,7 @@ export const ApplicationFormPage = () => {
                         {getTripsMap}
               </select>
               <InputName>
+              <p>Nome </p>
                     <input
                       name={"name"}
                       value={form.name}
@@ -93,6 +97,7 @@ export const ApplicationFormPage = () => {
                 </InputName>
 
                 <InputIdade>
+                <p>Idade </p>
                     <input
                       name={"age"}
                       value={form.age}
@@ -106,6 +111,7 @@ export const ApplicationFormPage = () => {
                 </InputIdade>
 
                 <InputTexto>
+                  <p>Descrição </p>
                     <input
                       name={"applicationText"}
                       value={form.applicationText}
@@ -117,6 +123,7 @@ export const ApplicationFormPage = () => {
                 </InputTexto>
 
                 <InputProfissao>
+                <p>Profissão </p>
                       <input
                       name={"profession"}
                       value={form.profession}
@@ -128,6 +135,7 @@ export const ApplicationFormPage = () => {
                 </InputProfissao>
 
                 <InputPais>
+                <p>País </p>
                     <input
                       name={"country"}
                       value={form.country}
@@ -138,13 +146,13 @@ export const ApplicationFormPage = () => {
                     />
                 </InputPais>
 
-              <button>Cadastrar</button>
+              <Botoes>Cadastrar</Botoes>
 
               </DivInputs>
 
           </form>
        
-    <button onClick={() => goToListPage()}>Voltar</button>
+    <Botoes onClick={() => goToListPage()}>Voltar</Botoes>
     </MainPage>
     <Footer />
   </Container>

@@ -19,7 +19,7 @@ export const MainPage = styled.div`
     justify-items: center;
     align-items: center;
     background-color: black;
-    color: white;
+    color: #9E9E9E;
     
    
 `
@@ -32,6 +32,12 @@ export const Botoes = styled.button`
         margin-top: 30px;
         color: #424242;
         font-family: Arial, sans-serif;
+
+            :hover{
+                background-color: #E0F2F1;
+                transition: 0.5s;
+                opacity: 0.7;
+            }
        
         
 `

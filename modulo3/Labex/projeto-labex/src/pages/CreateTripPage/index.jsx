@@ -3,7 +3,7 @@ import { useNavigate} from "react-router-dom";
 import { useState } from "react";
 import axios from 'axios';
 import { Footer } from "../../components/Footer";
-import {Container, MainPage} from './styled';
+import {Container, MainPage, DivCrieViagem, InputData, InputDescricao, InputDuracao, InputName, InputPlanet, Botoes} from './styled';
 
 export const CreateTripPage = () => {
   const routes = useNavigate()
@@ -80,42 +80,69 @@ const onChangeDurationInDays = (event) => {
   return (
     <Container>
        <MainPage>
-        <h1>Crie sua Viagem!</h1>
 
-        <input
-        placeholder="name"
-        type="name"
-        value={name}
-        onChange={onChangeName}
-      />
-        <input
-        placeholder="planet"
-        type="planet"
-        value={planet}
-        onChange={onChangePlanet}
-      />
-       <input
-        placeholder="date"
-        type="date"
-        value={date}
-        onChange={onChangeDate}
-      />
-       <input
-        placeholder="description"
-        type="description"
-        value={description}
-        onChange={onChangeDescription}
-      />
-       <input
-        placeholder="durationInDays"
-        type="durationInDays"
-        value={durationInDays}
-        onChange={onChangeDurationInDays}
-      />
-        <button onClick={() => goToAdminHomePage()}>Voltar</button>
-        <button onClick={() => postCreateTrip()}>Criar</button>
+            <DivCrieViagem>
+                <h1>Crie sua Viagem!</h1>
+            </DivCrieViagem>
+      <InputName>
+        <p>Nome </p>
+            <input
+            placeholder="name"
+            type="name"
+            value={name}
+            onChange={onChangeName}
+          />
+      </InputName>
+
+      <InputPlanet>
+          <p>Planeta </p>
+            <input
+            placeholder="planet"
+            type="planet"
+            value={planet}
+            onChange={onChangePlanet}
+          />
+
+      </InputPlanet>  
+
+      <InputData>
+        <p>Data </p>
+          <input
+            placeholder="date"
+            type="date"
+            value={date}
+            onChange={onChangeDate}
+          />
+      </InputData>
+
+      <InputDescricao>
+          <p>Descricao </p>
+            <input
+              placeholder="description"
+              type="description"
+              value={description}
+              onChange={onChangeDescription}
+            />
+      </InputDescricao>
+
+      <InputDuracao>
+          <p>Duracao da Viagem </p>
+            <input
+              placeholder="durationInDays"
+              type="durationInDays"
+              value={durationInDays}
+              onChange={onChangeDurationInDays}
+            />
+      </InputDuracao>
+
+        <Botoes onClick={() => goToAdminHomePage()}>Voltar</Botoes>
+        <Botoes onClick={() => postCreateTrip()}>Criar</Botoes>
+
+
         </MainPage>
+
         <Footer />
+
     </Container>
   );
 }
