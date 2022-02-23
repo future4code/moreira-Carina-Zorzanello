@@ -1,21 +1,21 @@
-export const routes = useNavigate()
 
-export const goToLogin = () => {
-  routes("/")
+
+export const goToLogin = (navigate) => {
+  navigate("/")
 }
 
-export const goToCadastro = () => {
-  routes("/cadastropage" )
+export const goToCadastro = (navigate) => {
+  navigate("/cadastropage" )
 }
 
-export const goToFeed = () => {
-  routes("/feedpage")
+export const goToFeed = (navigate) => {
+  navigate("/feedpage")
 }
 
-export const goToPost = () => {
-  routes("/postpage")
+export const goToPost = (navigate) => {
+  navigate("/postpage")
 }
 
-export const goToError = () => {
-  routes("/error")
+export const goToError = (navigate) => {
+  navigate("/error")
 }

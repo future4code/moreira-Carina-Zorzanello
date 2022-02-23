@@ -3,20 +3,40 @@ import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import {StyledToolBard} from "./Styled";
-import {goToLogin, routes} from "../../routes/Coordinator";
+import {goToCadastro, goToLogin, goToFeed} from "../../routes/Coordinator";
 import  {useNavigate}  from 'react-router-dom';
 
 
-const Header = () => {
+
+const Header = ({rightButtonText, setRightButtonText}) => {
+    const token = localStorage.getItem("token")
     const navigate = useNavigate()
+
+    
+    const logout = () => {
+      localStorage.removeItem("token")
+    }
+
+    const rightButtonAction = () => {
+      if(token){
+        logout()
+        setRightButtonText("Login")
+        goToLogin(navigate)
+        
+      }else{
+        goToLogin(navigate)
+      }
+    }
+
   return (
  
       <AppBar position="static">
         <StyledToolBard>
           <Typography variant="h6">
-            LabEddit
+            <Button onClick={() => goToFeed(navigate)} color="inherit">LabEddit</Button>
           </Typography>
-          <Button onClick={() => {navigate("/")}} color="inherit">Login</Button>
+          <Button onClick={() => goToCadastro(navigate)} color="inherit">Cadastre-se</Button>
+          <Button onClick={rightButtonAction} color="inherit">{rightButtonText}</Button>
         </StyledToolBard>
       </AppBar>
    
