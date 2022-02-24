@@ -12,8 +12,8 @@ export const goToFeed = (navigate) => {
   navigate("/feedpage")
 }
 
-export const goToPost = (navigate) => {
-  navigate("/postpage")
+export const goToPost = (navigate, id) => {
+  navigate(`/postpage/${id}`)
 }
 
 export const goToError = (navigate) => {

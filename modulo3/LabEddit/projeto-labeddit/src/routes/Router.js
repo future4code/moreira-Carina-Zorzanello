@@ -13,7 +13,7 @@ const Router = ({setRightButtonText}) => {
                 <Route path="/" element ={<LoginPage  setRightButtonText={setRightButtonText}/>} />
                 <Route path="/cadastropage" element ={<CadastroPage setRightButtonText={setRightButtonText} />} />
                 <Route path="/feedpage" element ={<FeedPage />} />
-                <Route path="/postpage" element ={<PostPage />} />
+                <Route path="/postpage/:id" element ={<PostPage />} />
                 <Route path="*" element ={<h1>Página não encontrada!</h1>} />
             </Routes>
     )
