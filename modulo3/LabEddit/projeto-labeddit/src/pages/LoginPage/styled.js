@@ -23,3 +23,4 @@ export const InputContainer = styled.div`
     align-items: center;
     margin-bottom: 20px;
 `
+

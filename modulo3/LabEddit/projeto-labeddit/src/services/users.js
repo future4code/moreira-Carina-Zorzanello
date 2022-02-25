@@ -3,6 +3,7 @@ import {BASE_URL} from "../constants/urls";
 import {goToFeed }from "../routes/Coordinator";
 
 
+
 export const login = (form, clear, navigate, setRightButtonText) => {
     axios.post(`${BASE_URL}/users/login`, form)
     .then((res)=>{
@@ -25,3 +26,30 @@ export const signup = (form, clear, navigate, setRightButtonText) => {
     .catch((error)=>alert("Usuário ou senha incorretos!"))
 }
 
+
+export const createPost = (body, clear) => {
+    axios.post(`${BASE_URL}/posts`, body, {
+        headers: {
+            Authorization: localStorage.getItem("token")
+        }
+    })
+    .then((res)=>{
+        alert(res.data)
+        clear()
+    })
+    .catch((error)=> alert(error.response))
+}
+
+
+export const createComment = (body, clear, id) => {
+    axios.post(`${BASE_URL}/posts/${id}/comments`, body, {
+        headers: {
+            Authorization: localStorage.getItem("token")
+        }
+    })
+    .then((res)=>{
+        alert(res.data)
+        clear()
+    })
+    .catch((error)=> alert(error.response))
+}

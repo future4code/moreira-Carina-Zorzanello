@@ -1,33 +1,35 @@
 import React from "react";
-import {CardContainer, DivCardsLista} from "./Styled";
+import {CardContainer, DivCardsLista, DivTitulo, DivComentario, DivQuantidadeComentarios, DivSomaVotos, DivVotar} from "./Styled";
+import { goToPost } from "../../routes/Coordinator";
+import { useNavigate } from "react-router-dom";
 
 const CardPost = (props) => {
+    const navigate = useNavigate()
+    const onClickPost = (id) => {
+        goToPost(navigate, id)
+      }
+
     return (
-        <CardContainer>  
+        <CardContainer onClick={() => onClickPost(props.id)}>  
 
-
+                
                 <DivCardsLista>
-                    Título: {props.body}
-                </DivCardsLista>
-
-                <DivCardsLista>
-                    Comentário: {props.title.toUpperCase()}
-                </DivCardsLista>
-
-                <DivCardsLista>
-                    Comentários: {props.commentCount}
-                </DivCardsLista>
-
-                {/* <DivCardsLista>
-                    Data Postagem: {props.createdAt}
-                </DivCardsLista> */}
-
-                <DivCardsLista>
-                    Votos: {props.userVote}
-                </DivCardsLista>
-
-                <DivCardsLista>
-                    Votar: {props.voteSum}
+                    <DivTitulo>
+                        Título: {props.title.toUpperCase()} 
+                    </DivTitulo>
+                    <DivComentario>
+                        Comentáro: {props.body} 
+                    </DivComentario>
+                   
+                    <DivQuantidadeComentarios>
+                        Quantidade de comentários: {props.commentCount} 
+                    </DivQuantidadeComentarios>
+                    <DivVotar>
+                        Votar neste Post: {props.userVote} 
+                    </DivVotar>
+                    <DivSomaVotos>
+                        Somatório de Votos: {props.voteSum} 
+                    </DivSomaVotos>
                 </DivCardsLista>
 
 
