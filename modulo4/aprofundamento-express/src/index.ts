@@ -25,20 +25,27 @@ app.get("/allTarefas", (request, response) => {
 
 // add nova tarefa
 app.post("/tarefas", (req, res) => {
-    const usuario: number = Number(req.headers.authorization)
-    const nomeDaTarefa = req.body.title
+    let codeError: number = 400
+    try {
+        const usuario: number = Number(req.headers.authorization)
+        const nomeDaTarefa = req.body.title
 
-    const novaTarefa: Afazeres = {
+        const novaTarefa: Afazeres = {
         userId: usuario,
         id: Date.now(),
         title: nomeDaTarefa,
         completed: false
+    } 
+        tarefas.push(novaTarefa)
+        res.send(tarefas)
+
+        if(!novaTarefa.userId || !novaTarefa.id || !novaTarefa.title || !novaTarefa.completed){
+            codeError = 422
+            throw new Error("Verifique os campos preenchidos!");
+        }
+    } catch (error) {
+        res.status(codeError).send({message: "Tarefa adicionada com sucesso!!"})
     }
-
-    tarefas.push(novaTarefa)
-
-    res.send(tarefas)
-
 
 })
 
