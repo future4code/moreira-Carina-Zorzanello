@@ -77,14 +77,15 @@ app.get('/users', (req: Request, res: Response)=>{
 })
 
 // Exercicio 4
-//a)
+//a)Put é utilizado para alterar geralmente, não mudaria nada mas não é uma boa prática
+//b) Não o apropriado é o post conforme a documentação
 app.post('/users', (req: Request, res: Response)=>{
     let errorCode: number = 400
     try {
         const  {id, name, email, type, age} = req.body
         if(!id || !name || !email || !type || !age){
             errorCode = 422
-            throw new Error("");
+            throw new Error("Missing data, please check");
         }
         const userNew: user = {
             id,
@@ -93,8 +94,10 @@ app.post('/users', (req: Request, res: Response)=>{
             type,
             age
         }
+        console.log(userNew)
+        users.push(userNew)
     } catch (error) {
-        
+        res.status(errorCode).send({message: "User created successfully"})
     }
 })
 
