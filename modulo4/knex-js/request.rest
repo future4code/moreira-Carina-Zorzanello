@@ -1,2 +1,12 @@
-GET http://localhost:3003/actor/2
+DELETE http://localhost:3003/actor/002
+content-type: application/json
+
+###
+
+PUT  http://localhost:3003/actor/001
+content-type: application/json
+
+###
+
+GET  http://localhost:3003/actor/female
 content-type: application/json

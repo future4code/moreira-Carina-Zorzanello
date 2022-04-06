@@ -56,3 +56,63 @@ const avgSalary = async (gender: string): Promise<any> => {
 
 Exercício 3
 
+A) 
+  app.get('/actor/:id', async(req, res) => {
+    try {
+        const id = req.params.id
+    
+        console.log(await getActorById(id))
+    
+        res.end()
+    }
+    catch(error) {
+       console.log("error.message");
+       res.status(500).send("An unexpected error occurred")
+    }
+    })
+
+    B)  app.get('/actor/:gender', async(req, res) => {
+        try {
+            const gender = req.params.gender
+            
+            console.log(await countActors(gender))
+
+            res.end()
+            console.log(gender)
+        }
+        catch(error) {
+            console.log("error.message");
+            res.status(500).send("An unexpected error occurred")
+        }
+        })
+
+Exercicio 4
+
+A)
+  app.put('/actor/:id', async(req, res) => {
+    try{
+        const id = req.params.id
+        const salary = 2000
+        console.log(await updateActor(id, salary))
+       res.send("Sucess")
+    }
+    catch(error: any) {
+       console.log(error.message)
+       res.status(500).send("An Expected Error has occurred")
+    }
+ })
+ 
+ 
+ B)
+ app.delete('/actor/:id', async(req, res) => {
+    try{
+        const id = req.params.id
+        console.log(await deleteActor(id))
+
+       res.send("Sucess - Ator deletado")
+    }
+    catch(error: any) {
+       console.log(error.message)
+       res.status(500).send("An Expected Error has occurred")
+    }
+ })
