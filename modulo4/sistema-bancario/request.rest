@@ -1,0 +1,22 @@
+GET http://localhost:3003/test/hello
+content-type: application/json
+
+###
+
+
+POST  http://localhost:3003/users
+content-type: application/json
+
+{
+    "id": 9,
+    "name": "Augusto",
+    "cpf": 99999999999,
+    "birth": "2021-05-05",
+    "balance": 0,
+    "transaction": [2000]
+}
+
+###
+
+GET http://localhost:3003/users
+content-type: application/json
