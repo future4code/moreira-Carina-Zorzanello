@@ -1,2 +1,2 @@
-GET  http://localhost:3003/users
+GET  http://localhost:3003/users?name=ju&sort=email&order=ASC&page=2
 content-type: application/json

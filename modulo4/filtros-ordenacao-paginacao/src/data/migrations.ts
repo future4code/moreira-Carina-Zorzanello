@@ -26,3 +26,4 @@ const closeConnection = () => { connection.destroy() }
 createTables()
    .then(insertUsers)
    .finally(closeConnection)
+
