@@ -16,8 +16,19 @@ export function generateId(): string {
 
   a) *Explique o código acima com as suas palavras.*
 
-  
+  O código acima está criando um usuário onde é necessário passar nome email e senha. E está fazendo uma conecção com o banco de dados.
 
-b) *Comece criando a tabela de usuários. Coloque a query que você utilizou no arquivo de respostas.*
+  Exercício 3
 
-c) *Pela mesma justificativa do exercício anterior, crie uma função para ser responsável pela criação de usuários no banco.*
+  a) O que a linha as string faz? Por que precisamos usar ela ali?
+
+  Ela determina "tipa" que é uma string.
+
+  Exercicio 3
+
+  a) *O que a linha `as string` faz? Por que precisamos usar ela ali?*
+
+  Para que no momento da leitura da senha caso venham letras e números não tenhamos problemas com nossa aplicação.
+
+
+
