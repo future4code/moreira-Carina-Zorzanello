@@ -10,7 +10,7 @@ export default async function createUser(
   res: Response
 ): Promise<void> {
   try {
-     const { email, password, name, nickname } = req.body
+     const { email, password, name, nickname, role } = req.body
      
      if (!req.body.email || req.body.email.indexOf("@") === -1) {
       throw new Error("Invalid email");
@@ -27,7 +27,8 @@ export default async function createUser(
     const userData = {
       id: id,
       email: req.body.email,
-      password: req.body.cypherPassword,
+      password: cypherPassword,
+      role: req.body.role,
     };
 
   
@@ -36,6 +37,7 @@ export default async function createUser(
 
     const token = generateToken({
       id: userData.id,
+      role: userData.role,
     });
  
     res.status(200).send({

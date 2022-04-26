@@ -1,0 +1,32 @@
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+   "email": "francisco@gmail.com", 
+   "password": "francisco123", 
+   "name": "Francisco Rosa" ,
+   "nickname": "Fran",
+    "role":"ADMIN"
+}
+
+###
+
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+   "email": "francisco@gmail.com",
+   "password": "francisco123"
+  
+}
+
+###
+
+
+GET http://localhost:3003/user/profile
+Content-Type: application/json
+
+{
+   "id": "d5440a48-a580-46f1-8a54-0745603a5dc7"
+  
+}

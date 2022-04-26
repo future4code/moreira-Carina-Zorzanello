@@ -26,13 +26,14 @@ export default async function login(
 
       const passwordIsCorrect:boolean = new HashManager().compareHash(userData.password, user.password) 
   
-      if (user.password !== passwordIsCorrect) {
+      if (!passwordIsCorrect) {
         throw new Error("Invalid password");
       }
   
       
       const token = generateToken({
         id: user.id,
+        role: user.role,
       });
   
       res.status(200).send({

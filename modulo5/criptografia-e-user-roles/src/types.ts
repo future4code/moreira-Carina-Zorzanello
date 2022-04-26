@@ -1,5 +1,11 @@
-export type AuthenticationData = {
+export enum USER_ROLES{
+   ADMIN= "ADMIN",
+   NORMAL="NORMAL"
+}
+
+export interface AuthenticationData  {
    id: string;
+   role:USER_ROLES
  }
  export type user = {
     id: string
@@ -7,4 +13,5 @@ export type AuthenticationData = {
     password: string
     name: string
     nickname: string
+    role:USER_ROLES
  }
