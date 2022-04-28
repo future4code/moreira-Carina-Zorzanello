@@ -1,0 +1,35 @@
+# GET  http://localhost:3003/user/001
+# content-type: application/json
+
+# ###
+
+# PUT  http://localhost:3003/user
+# content-type: application/json
+
+# {
+#     "name": "Amelia",
+#     "nickname": "Mélia",
+#     "email": "amelia@gmail.com"
+# }
+
+###
+
+PUT http://localhost:3003/task
+content-type: application/json
+
+{
+    "title": "Fazer rancho",
+    "description": "Comprar frutas",
+    "limit_Date": "2022-04-08",
+    "creator_User_Id": "004"
+}
+
+###
+
+GET http://localhost:3003/task/004
+content-type: application/json
+
+
+
+
+
