@@ -8,13 +8,12 @@ export default class PostsController{
     ){}
 
     posts = async(req: Request, res: Response) =>{
-        const {photo, description, type, created_at, author_id} = req.body;
+        const {photo, description, type, author_id} = req.body;
 
         const input: PostsInputDTO ={
             photo,
             description,
             type,
-            created_at,
             author_id
         }
         try {

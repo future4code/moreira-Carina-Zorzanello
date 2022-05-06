@@ -3,9 +3,10 @@ enum POST_TYPES {
     EVENT = "event"
  }
 
-export type PostsInputDTO = {
+export type PostIdInputDTO = {
     photo: string
     description: string
-    type: POST_TYPES,
+    type: POST_TYPES
+    created_at: Date
     author_id: string
 }
