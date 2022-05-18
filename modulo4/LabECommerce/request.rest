@@ -1,0 +1,49 @@
+
+POST  http://localhost:3003/users
+content-type: application/json
+
+{
+    "id": "007",
+    "name": "Carla da Silva",
+    "email": "carla@gmail.com",
+    "password": "senha1234"
+}
+
+###
+
+GET  http://localhost:3003/user
+content-type: application/json
+
+###
+
+POST  http://localhost:3003/products
+content-type: application/json
+
+{
+    "id": "06",
+    "name": "Mesa para Escritorio",
+    "price": "250000",
+    "image_url": "https://i.picsum.photos/id/0/5616/3744.jpg?hmac=3GAAioiQziMGEtLbfrdbcoenXoWAW-zlyEAMkfEdBzQ"
+}
+
+###
+
+GET  http://localhost:3003/products
+content-type: application/json
+
+###
+
+POST  http://localhost:3003/purchases
+content-type: application/json
+
+{
+    "id": "",
+    "user_id": "001",
+    "product_id": "002",
+    "quantity": "2"
+}
+
+###
+
+GET  http://localhost:3003/users/002/purchases
+content-type: application/json

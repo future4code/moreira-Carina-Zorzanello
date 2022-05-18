@@ -1,0 +1,10 @@
+GET http://localhost:3003/users
+content-type: application/json
+
+{
+    "id": 7,
+    "name": "Nina",
+    "email": "nina@gmail.com",
+    "type": "",
+    "age": 32
+}
